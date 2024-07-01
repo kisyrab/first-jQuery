@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script lang="java">
+        $(function(){
+
+            $(".left").click(function(){
+                $(".pink").animate({"left" : "-=20px"}, 300);
+            }) /* left click */
+
+            $(".right").click(function(){
+                $(".pink").animate({"left" : "+=20px"}, 300);
+            }) /* left click */
+            
+            $(".top").click(function(){
+                $(".pink").animate({"top" : "-=20px"}, 300);
+            }) /* left click */
+            
+            $(".bottom").click(function(){
+                $(".pink").animate({"top" : "+=20px"}, 300);
+            }) /* left click */
+
+
+
+
+        }) /* j */
+    </script>
+
+
+    <style>
+        body{background-color: black;}
+        
+        h1{color: white; margin-bottom: 30px;}
+        
+        button{margin-bottom: 30px;}
+
+        .left{}
+        .right{}
+        .top{}
+        .bottom{}
+
+        .box{
+            width: 300px;
+            height: 400px;
+            border: 3px solid white;
+            position: relative;
+            overflow: hidden;
+            /* margin: 0 auto; */
+        }
+
+        .pink{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: deeppink;
+            position: absolute;
+            left: 0; top: 0;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <h1>jQuery Event</h1>
+
+    <button class="left">left</button>
+    <button class="right">right</button>
+    <button class="top">top</button>
+    <button class="bottom">bottom</button>
+
+    <div class="box">
+        <div class="pink"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

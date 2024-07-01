@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First jQuery</title>
+    
+    <script src="js/jquery-3.7.1.js"></script>
+    <!--<script src="js/main.js"></script>  외부 스크립트로 쓰는법. 확장자는 .js -->
+
+    <!-- <script language="javascript"> -->
+    <script lang="java">
+        // 내부스크립트로 쓰기
+        // $(document).ready(function(){}) 이것과 아래 둘중 하나를 처음에 선언하고 시작 $는 제이쿼리를 의미
+        $(function(){
+
+            $(".btn_01").click(function(){
+                alert("버튼01을 클릭함");    /* 경고창 뜨게 하는 명령 */
+                $(this).css("color" , "skyblue");
+            }) /* .btn_01 click */
+            
+            $(".btn_02").click(function(){
+                alert("버튼02을 클릭함");
+                $(this).css("width" , "200px").css("height" , "100px");
+            }) /* .btn_02 click */
+            
+            $(".btn_03").click(function(){
+                console.log("버튼03을 클릭함") /* f12>console 확인 가능 */
+                $(this).css({"width" : "150px" , "height" : "100px"})
+                // alert("버튼03을 클릭함")
+            }) /* .btn_03 click */
+            
+            $(".btn_04").click(function(){
+                console.log("버튼04을 클릭함")
+                $(this).css({"color" : "#000" , "width" : "300px" , "height" : "100px"})
+                // alert("버튼04을 클릭함")
+            }) /* .btn_04 click */
+
+
+        }) /* jQuery end */
+
+
+
+
+    </script>
+
+    <!-- 스크립트는 바디에 넣어도됨 -->
+
+    <style>
+        body{
+            background-color: #444;
+            padding: 20px;
+        }
+
+        .container{}
+        .container h1{margin-bottom: 50px; color: white;}
+        .container button{
+            padding: 5px 20px;
+            background-color: deeppink;
+            color: #fff;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .container button:hover{
+            background-color: white;
+            color: deeppink;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Basic jQuery</h1>
+
+        <button class="btn_01">Button01</button>
+        <button class="btn_02">Button02</button>
+        <button class="btn_03">Button03</button>
+        <button class="btn_04">Button04</button>
+
+    </div> <!-- container -->
+
+
+
+
+</body>
+</html>
